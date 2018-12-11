@@ -1,0 +1,29 @@
+
+<!-- saved from url=(0051)http://enginkelmendi.epizy.com/20181211/Ornek3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Untitled Document</title>
+<script type="text/javascript">
+function test()
+{
+var metin=document.getElementById("eposta").value;
+var di=new RegExp("^[A-Z0-9a-z .-]+@[A-Z0-9a-z]+\.[a-zA-Z]{2,3}$","g");
+// var di=/^[A-Z0-9a-z .-]+@[A-Z0-9a-z]+\.[a-zA-Z]{2,3}$,g;
+if(di.test(metin)) document.ById("sonuc").innerHTML = "E-posta uygun:" + metin;
+else
+{
+  alert("Doğru formatta bir e-posta giriniz!..."); document.ById("eposta").value="";
+                                                   document.ById("eposta").focus();
+}
+}
+</script>
+</head>
+
+<body>
+E-Posta: <input type="text" id="eposta"><br>
+ <input type="button" value="E-posta Test" onclick="test()">
+ <br>
+ <div id="sonuc"></div>
+
+
+</body></html>

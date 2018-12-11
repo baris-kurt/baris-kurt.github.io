@@ -1,0 +1,27 @@
+
+<!-- saved from url=(0051)http://enginkelmendi.epizy.com/20181211/Ornek2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Untitled Document</title>
+<script type="text/javascript">
+function degistir()
+{
+var aranan = document.getElementById("aranan").value;
+var di = new RegExp(aranan,"gi");
+var metin = document.getElementById("metin").value;
+var yeni = document.getElementById("yeni").value;
+var sonuc =metin.replace(di,yeni);
+document.getElementById("sonuc").innerHTML=sonuc;
+}
+</script>
+</head>
+
+<body>
+    İfade:<textarea id="metin"></textarea><br>
+	Aranan ifade: <input type="text" id="aranan"><br>
+	Yeni ifade: <input type="text" id="yeni"><br>
+	<input type="button" value="DEĞİŞTİR" onclick="degistir()"> <br>
+	
+<div id="sonuc"></div> 
+
+</body></html>
